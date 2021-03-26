@@ -11,6 +11,7 @@ import { CoffeeRatingModule } from './coffee-rating/coffee-rating.module';
   imports: [
     ConfigModule.forRoot({
       validationSchema: Joi.object({
+        API_KEY: Joi.required(),
         DATABASE_HOST: Joi.required(),
         DATABASE_PORT: Joi.number().default(5432),
         DATABASE_USER: Joi.required(),
